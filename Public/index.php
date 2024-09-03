@@ -91,7 +91,7 @@ $products = $insert->getAll();
     <meta charset="utf-8">
     <title>Product Management</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?php "../../assets/css/style.css" ?>">
 
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -151,7 +151,7 @@ $products = $insert->getAll();
         </div>
 
         <h1>Product List</h1>
-        <table class="table table-bordered">
+        <table class="table-striped table table-hover table-bordered">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -239,4 +239,8 @@ $products = $insert->getAll();
         <?php endif; ?>
     </script>
 </body>
+
 </html>
+<style>
+
+</style>
