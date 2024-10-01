@@ -7,7 +7,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./src:/var/www/html
+      - ./Public:/var/www/html
     networks:
       - app-network
     depends_on:
