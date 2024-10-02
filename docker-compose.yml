@@ -5,9 +5,9 @@ services:
     build: .
     container_name: php-apache
     ports:
-      - "80:80"
+      - "8081:8081"
     volumes:
-      - ./Public:/var/www/html
+      - ../Crud-PHP-POO:/var/www/html
     networks:
       - app-network
     depends_on:
@@ -18,14 +18,12 @@ services:
     container_name: mysql-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: XerecaAzeda123!
-      MYSQL_DATABASE: php_poo
-      MYSQL_USER: root
-      MYSQL_PASSWORD: XerecaAzeda123!
+      MYSQL_ROOT_PASSWORD: "XerecaAzeda123!"  # Senha do usuário root
+      MYSQL_DATABASE: "php_poo"  # Banco de dados a ser criado
     ports:
-      - "3306:3306"
+      - "3307:3306"  # Mapeando a porta 3307 do host para a porta 3306 do container
     volumes:
-      - db-data:/var/lib/mysql
+      - db-data:/var/lib/mysql  # Persistência dos dados do MySQL
     networks:
       - app-network
 
