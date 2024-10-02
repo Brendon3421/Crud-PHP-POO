@@ -5,7 +5,7 @@ FROM php:latest
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 # Copia os arquivos do projeto para o diretório do Apache
-COPY ../Crud-PHP-POO /var/www/html
+COPY . /var/www/html
 
 # Define a pasta de trabalho
 WORKDIR /var/www/html
